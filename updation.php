@@ -24,7 +24,7 @@ function updateRow($csvData,$tableData,$tableName,$commonKey,$commonValue){
     	foreach($tableData as $tableKey=>$value){
     		//echo " <br> $tableKey $value <br>";
     		if($tableKey != $commonKey && $tableKey == $key){
-    		 $sql = "UPDATE `$tableName` SET `$tableKey`= '$updatedValue' WHERE '$commonKey' = '$commonValue'";
+    		 $sql = "UPDATE `$tableName` SET `$tableKey`= '$updatedValue' WHERE `$commonKey` = '$commonValue'";
     		 
     		 echo "<br>" .$sql;
     		 $run = mysqli_query($conn,$sql);
